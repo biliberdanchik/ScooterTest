@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -48,6 +49,11 @@ public class checkDDListFAQ {
         String actualText = driver.findElement(By.xpath(String.format(".//*[@id='accordion__panel-%d']/p", numberInList - 1))).getText();
         assertEquals(String.format("Текст элемента №%d выпадающего списка не соответствует требованиям", numberInList), expectedText, actualText);
 
+    }
+
+    @After
+    public void closeBrowser() {
+        driver.quit();
     }
 }
 
