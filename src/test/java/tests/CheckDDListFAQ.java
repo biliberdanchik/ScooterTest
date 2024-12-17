@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,14 +12,14 @@ import pageObjects.MainPage;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class checkDDListFAQ {
+public class CheckDDListFAQ {
     private WebDriver driver;
 
     private final int numberInList; //Номер компонента
     private final String expectedText;  //Ожидаемый текст
 
 
-    public checkDDListFAQ(int numberInList, String expectedText) {
+    public CheckDDListFAQ(int numberInList, String expectedText) {
         this.numberInList = numberInList;
         this.expectedText = expectedText;
     }

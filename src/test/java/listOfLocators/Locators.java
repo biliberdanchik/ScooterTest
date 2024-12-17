@@ -1,6 +1,7 @@
 package listOfLocators;
 
 public class Locators {
+    //Главная страница:
     //Раздел Вопросы о важном: ".//*[text() = "Вопросы о важном"]"
         //Выпадающий список:
     //1. Сколько это стоит? И как оплатить?: "//*[@id="accordion__heading-0"]"
@@ -21,4 +22,17 @@ public class Locators {
     //6. "//*[@id=\"accordion__panel-5\"]/p"
     //7. "//*[@id=\"accordion__panel-6\"]/p"
     //8. "//*[@id=\"accordion__panel-7\"]/p"
+
+    //Кнопка заказа в заголовке: .//*[@class='Button_Button__ra12g']
+    //Кнопка заказа на странице: .//*[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']
+
+    //Страница заказа:
+    //Имя: .//*[contains(@placeholder, "Имя") and @class='Input_Input__1iN_Z Input_Error__1Tx5d Input_Responsible__1jDKN']
+    //Фамилия: .//*[contains(@placeholder, "Фамилия") and @class='Input_Input__1iN_Z Input_Error__1Tx5d Input_Responsible__1jDKN']
+    //Адрес: .//*[contains(@placeholder, "Адрес") and @class='Input_Input__1iN_Z Input_Responsible__1jDKN']
+    //Станция метро: .//*[contains(@placeholder, "Станция метро")]
+    //Телефон: .//*[contains(@placeholder, "Телефон") and @class='Input_Input__1iN_Z Input_Responsible__1jDKN']
+    //Кнопка
+    //Дата доставки: .//*[@class='Input_Input__1iN_Z Input_Responsible__1jDKN react-datepicker-ignore-onclickoutside']
+
 }
