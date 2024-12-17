@@ -18,15 +18,15 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public void scrollToDDListFAQ() {
+    public void scrollToDDListFAQ() {   //Прокрутить до выпадающего списка с FAQ
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(titleOfDDListFAQ));
     }
 
-    public void clickToComponentDDListFAQ(int numberInList) {
+    public void clickToComponentDDListFAQ(int numberInList) {   //Нажать на компонент выпадающего списка
         driver.findElement(By.xpath(String.format("//*[@id='accordion__heading-%d']", numberInList - 1))).click();
     }
 
-    public void waitTextOfComponentDDListFAQ(int numberInList) {
+    public void waitTextOfComponentDDListFAQ(int numberInList) {    //Ожидания появления текста компонента
         new WebDriverWait(driver, Duration.ofSeconds(2))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(String.format(".//*[@id='accordion__panel-%d']/p", numberInList - 1))));
     }

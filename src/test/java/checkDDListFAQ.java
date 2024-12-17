@@ -13,8 +13,8 @@ import static org.junit.Assert.assertEquals;
 public class checkDDListFAQ {
     private WebDriver driver;
 
-    private final int numberInList;
-    private final String expectedText;
+    private final int numberInList; //Номер компонента
+    private final String expectedText;  //Ожидаемый текст
 
 
     public checkDDListFAQ(int numberInList, String expectedText) {
@@ -46,8 +46,8 @@ public class checkDDListFAQ {
         objMainPage.clickToComponentDDListFAQ(numberInList);
         objMainPage.waitTextOfComponentDDListFAQ(numberInList);
 
-        String actualText = driver.findElement(By.xpath(String.format(".//*[@id='accordion__panel-%d']/p", numberInList - 1))).getText();
-        assertEquals(String.format("Текст элемента №%d выпадающего списка не соответствует требованиям", numberInList), expectedText, actualText);
+        String actualText = driver.findElement(By.xpath(String.format(".//*[@id='accordion__panel-%d']/p", numberInList - 1))).getText(); //Фиксируем фактический результат
+        assertEquals(String.format("Текст элемента №%d выпадающего списка не соответствует требованиям", numberInList), expectedText, actualText); //Сравнение ожидаемого и фактического текста
 
     }
 
