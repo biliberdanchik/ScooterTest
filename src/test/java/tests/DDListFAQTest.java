@@ -14,14 +14,14 @@ import static pageObjects.MainPage.TEXT_COMPONENT_DDLIST;
 import static pageObjects.MainPage.URL_MAIN_PAGE;
 
 @RunWith(Parameterized.class)
-public class DDListFAQ {
+public class DDListFAQTest {
     private WebDriver driver;
 
     private final int numberInList; //Номер компонента
     private final String expectedText;  //Ожидаемый текст
 
 
-    public DDListFAQ(int numberInList, String expectedText) {
+    public DDListFAQTest(int numberInList, String expectedText) {
         this.numberInList = numberInList;
         this.expectedText = expectedText;
     }

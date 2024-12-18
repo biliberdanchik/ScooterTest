@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 import static pageObjects.MainPage.URL_MAIN_PAGE;
 
 @RunWith(Parameterized.class)
-public class RegistrationOrder {
+public class RegistrationOrderTest {
 
     public static final By SUCCESSFUL_ORDER_FORM = By.xpath(".//*[@class='Order_Modal__YZ-d3']");
     private WebDriver driver;
@@ -29,7 +29,7 @@ public class RegistrationOrder {
     private final String colorScooter;
     private final String comment;
 
-    public RegistrationOrder(String typeButton, String name, String surname, String address, String metroStation, String phoneNumber, String deliveryDate, String rentalPeriod, String colorScooter, String comment) {
+    public RegistrationOrderTest(String typeButton, String name, String surname, String address, String metroStation, String phoneNumber, String deliveryDate, String rentalPeriod, String colorScooter, String comment) {
         this.typeButtonNewOrder = typeButton;
         this.name = name;
         this.surname = surname;
