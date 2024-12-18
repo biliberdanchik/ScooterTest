@@ -10,16 +10,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.MainPage;
 
 import static org.junit.Assert.assertEquals;
+import static pageObjects.MainPage.TEXT_COMPONENT_DDLIST;
+import static pageObjects.MainPage.URL_MAIN_PAGE;
 
 @RunWith(Parameterized.class)
-public class CheckDDListFAQ {
+public class DDListFAQ {
     private WebDriver driver;
 
     private final int numberInList; //Номер компонента
     private final String expectedText;  //Ожидаемый текст
 
 
-    public CheckDDListFAQ(int numberInList, String expectedText) {
+    public DDListFAQ(int numberInList, String expectedText) {
         this.numberInList = numberInList;
         this.expectedText = expectedText;
     }
@@ -41,14 +43,14 @@ public class CheckDDListFAQ {
     @Test
     public void checkTextInDDListFAQ() {   //Проверка текста пунктов в выпадающем списке Вопросы о важном
         driver = new ChromeDriver();
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(URL_MAIN_PAGE);
         MainPage objMainPage = new MainPage(driver);
 
         objMainPage.scrollToDDListFAQ();
         objMainPage.clickToComponentDDListFAQ(numberInList);
         objMainPage.waitTextOfComponentDDListFAQ(numberInList);
 
-        String actualText = driver.findElement(By.xpath(String.format(".//*[@id='accordion__panel-%d']/p", numberInList - 1))).getText(); //Фиксируем фактический результат
+        String actualText = driver.findElement(By.xpath(String.format(TEXT_COMPONENT_DDLIST, numberInList - 1))).getText(); //Фиксируем фактический результат
         assertEquals(String.format("Текст элемента №%d выпадающего списка не соответствует требованиям", numberInList), expectedText, actualText); //Сравнение ожидаемого и фактического текста
 
     }
