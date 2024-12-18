@@ -16,7 +16,7 @@ public class MainPage {
 
     public static final String URL_MAIN_PAGE = "https://qa-scooter.praktikum-services.ru/";
     private static final By TITLE_OF_DDLIST_FAQ = By.xpath(".//*[text() = 'Вопросы о важном']"); //Заголовок FAQ
-    public static final String COMPONENT_DDLIST = "//*[@id='accordion__heading-%d']";
+    private static final String COMPONENT_DDLIST = "//*[@id='accordion__heading-%d']";
     public static final String TEXT_COMPONENT_DDLIST = ".//*[@id='accordion__panel-%d']/p";
     private final By BUTTON_ORDER_IN_HEADER = By.xpath(".//*[@class='Button_Button__ra12g']"); //Кнопка "Заказать" в заголовке страницы
     private final By BUTTON_ORDER_ON_PAGE = By.xpath(".//*[@class='Home_FinishButton__1_cWm']"); //Кнопка "Заказать" в середине страницы

@@ -20,7 +20,7 @@ public class OrderPage {
     private static final String METRO_STATION = ".//*[text()='%s']";
     private static final By BUTTON_NEXT = By.xpath(".//*[@class='Button_Button__ra12g Button_Middle__1CSJM']");
     private static final By DELIVERY_DATE = By.xpath(".//*[contains(@placeholder, 'Когда привезти самокат')]");
-    public static final By HEADER_ABOUT_RENT = By.xpath(".//*[text()='Про аренду']");
+    private static final By HEADER_ABOUT_RENT = By.xpath(".//*[text()='Про аренду']");
     private static final By DD_LIST_RENTAL_PERIOD = By.xpath(".//*[@class='Dropdown-placeholder']");
     private static final String RENTAL_PERIOD = ".//*[text()='%s']";
     private static final String CHECKBOX_COLOR = ".//*[@id='%s']";
