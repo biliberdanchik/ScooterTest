@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.MainPage;
-import pageObjects.OrderPage;
+import page.objects.MainPage;
+import page.objects.OrderPage;
 
 import static org.junit.Assert.assertTrue;
-import static pageObjects.MainPage.URL_MAIN_PAGE;
+import static page.objects.MainPage.URL_MAIN_PAGE;
 
 @RunWith(Parameterized.class)
 public class RegistrationOrderTest {

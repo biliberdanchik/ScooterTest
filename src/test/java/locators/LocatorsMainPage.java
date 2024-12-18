@@ -1,4 +1,4 @@
-package Locators;
+package locators;
 
 public class LocatorsMainPage {
     //Главная страница:

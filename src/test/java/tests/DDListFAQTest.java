@@ -7,11 +7,11 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.MainPage;
+import page.objects.MainPage;
 
 import static org.junit.Assert.assertEquals;
-import static pageObjects.MainPage.TEXT_COMPONENT_DDLIST;
-import static pageObjects.MainPage.URL_MAIN_PAGE;
+import static page.objects.MainPage.TEXT_COMPONENT_DDLIST;
+import static page.objects.MainPage.URL_MAIN_PAGE;
 
 @RunWith(Parameterized.class)
 public class DDListFAQTest {
