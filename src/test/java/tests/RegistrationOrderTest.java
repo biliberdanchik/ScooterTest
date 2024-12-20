@@ -6,10 +6,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import page.objects.MainPage;
 import page.objects.OrderPage;
-import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
 import static page.objects.MainPage.URL_MAIN_PAGE;
@@ -17,7 +15,7 @@ import static page.objects.MainPage.URL_MAIN_PAGE;
 @RunWith(Parameterized.class)
 public class RegistrationOrderTest {
 
-    public static final By SUCCESSFUL_ORDER_FORM = By.xpath(".//div[@Class='Order_ModalHeader__3FDaJ']/*[text()='Заказ оформлен']");
+    public static final By SUCCESSFUL_ORDER_FORM = By.xpath("//*[@data-value='Заказ оформлен']");
     private WebDriver driver;
 
     private final String typeButtonNewOrder;
@@ -68,7 +66,6 @@ public class RegistrationOrderTest {
 
         objOrderPage.clickButtonConfirmationOrder();
 
-        new WebDriverWait(driver, Duration.ofSeconds(2));
         WebElement formSuccessfulOrder = driver.findElement(SUCCESSFUL_ORDER_FORM);
         boolean isFormSuccessfulOrderDisplayed = formSuccessfulOrder.isDisplayed();
         assertTrue("Форма с информацией об успешном оформлении заказа не отображается", isFormSuccessfulOrderDisplayed);
